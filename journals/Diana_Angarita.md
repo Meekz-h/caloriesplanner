@@ -7,7 +7,7 @@ day 1 (March 20/2023):
     3. - Pitch the idea to the instructors and got the OK: After break, the instructors came into our room, and Brian pitched the idea, and the instructor liked and approved the idea and gave us some input towards the next steps.
     4. - Try the API to make sure it works, and we have the information we need: We tried the API in insomnia to see the data we will have available, tested it on all our machines, and agreed on the data we will use.
 
-day 2 (March 20/2023):
+day 2 (March 21/2023):
     1. -Today, we spent most of the day working on lectures, career service, etc. At the end of the day, the team started working on the app's wireframes, which was a really good experience because we all got to share how we imagined the application and then discuss what we wanted to add to the design. We finished the main page for authenticated users and the main page for no authenticated users. We'll keep working tomorrow on it.
     2. -We discussed what CSS library we wanted to use for the project. We all agreed we wanted to try tailwinds, so we have more experience with another library
     3. -We started to discuss what database we would like to use for the project. We have yet to decide, but we all want to learn mango, so we have more expertise in a different one
