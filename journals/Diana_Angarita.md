@@ -11,3 +11,7 @@ day 2 (March 21/2023):
     1. -Today, we spent most of the day working on lectures, career service, etc. At the end of the day, the team started working on the app's wireframes, which was a really good experience because we all got to share how we imagined the application and then discuss what we wanted to add to the design. We finished the main page for authenticated users and the main page for no authenticated users. We'll keep working tomorrow on it.
     2. -We discussed what CSS library we wanted to use for the project. We all agreed we wanted to try tailwinds, so we have more experience with another library
     3. -We started to discuss what database we would like to use for the project. We have yet to decide, but we all want to learn mango, so we have more expertise in a different one
+
+day 3 (March 22/2023):
+    1. -Today we finished working on the wireframing designs, I feel we are on a good spot. We kinda started working on the logo, but that is going to be on hold on since is gonna be part of the front end. However, we have an option we might use for the project.
+    2. -I am going through the API design requirements, and reading what we should start working tomorrow. Pretty much I feel happy with the way everybody is adding to the team. 
