@@ -14,4 +14,12 @@ day 2 (March 21/2023):
 
 day 3 (March 22/2023):
     1. -Today we finished working on the wireframing designs, I feel we are on a good spot. We kinda started working on the logo, but that is going to be on hold on since is gonna be part of the front end. However, we have an option we might use for the project.
-    2. -I am going through the API design requirements, and reading what we should start working tomorrow. Pretty much I feel happy with the way everybody is adding to the team. 
+    2. -I am going through the API design requirements, and reading what we should start working tomorrow. Pretty much I feel happy with the way everybody is adding to the team.
+
+day 4 (March 23/2023):
+    1. -Today, we started working on the API's design according to the requirements. I saw two different wireframes this morning, and our group requested feedback from Riley, and so far, we have a clearer idea.
+    2. I am a little worried because we have been able to touch the APIs at the time I am logging in to this journal because we were finishing the resume with a new rubric that didn't match the one released a few weeks ago, so we had to work on that for a while. We'll have a little time after 5 pm to work on that (hopefully)
+    3. - Omar came into the room, and we shared with him the wireframe design, got feedback on that, and also we discussed the code of conduct, and we concluded that we have to finish discussing some stuff with the group, such as the roles, and the schedule during spring break.
+
+day 5 (March 25/2023):
+    1. -We finished working on the FAST API designs today. It was a productive day; we accomplished what we needed this week, so I feel happy about this day and this week. We got feedback for our design and have fixed what is required so far.
