@@ -23,3 +23,7 @@ day 4 (March 23/2023):
 
 day 5 (March 25/2023):
     1. -We finished working on the FAST API designs today. It was a productive day; we accomplished what we needed this week, so I feel happy about this day and this week. We got feedback for our design and have fixed what is required so far.
+
+day 6 (March 27/2023):
+    1. -We worked today on the Docker-compose.yaml. It was challenging because it wasn't working at the beginning. We worked through it, and we got it working.
+    2. -We started working on the FASTapi and are progressing well. We are almost finished with the entry endpoints, and tomorrow, we'll finish the update entry.
