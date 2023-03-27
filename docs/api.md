@@ -118,11 +118,11 @@
   }
   ```
 
-# Meal Log:
+# Meal Entries:
 
-### Create a Meal Log
+### Create a meal entry
 
-- Endpoint path: /logs
+- Endpoint path: /entries
 - Endpoint method: POST
 
 - Headers:
@@ -140,11 +140,11 @@
 }
 ```
 
-- Response: The Created meal log
+- Response: The Created meal entry
 - Response shape (JSON):
 
 ```json
-meal_log:{
+meal_entry:{
 	id: str,
     name: str,
     category: str,
@@ -154,9 +154,9 @@ meal_log:{
 }
 ```
 
-## Get a list of logs
+## Get a list of entries
 
-- Endpoint Path: /logs
+- Endpoint Path: /entries
 - Endpoint Method: Get
 
 - Headers:
@@ -170,7 +170,7 @@ meal_log:{
 
 ```json
 { meals: [
-meal_log: {
+meal_entry: {
 id: str,
 name: str,
 category: str,
@@ -182,19 +182,19 @@ category: str,
 }
 ```
 
-## Get a log by ID
+## Get an entry by ID
 
-- Endpoint Path: /logs/{id}
+- Endpoint Path: /entries/{id}
 - Endpoint Method: Get
 - Query parameters:
   - d: Datetime (where date = date)
 - Headers:
   - Authorization: Bearer token
-- Response: A specific meal log by id or date
+- Response: A specific meal entry by id or date
 - Response shape(JSON) :
 
 ```json
-    meal_log:{
+    meal_entry:{
             id: str,
             name: str,
             category: str,
@@ -204,9 +204,9 @@ category: str,
         }
 ```
 
-### Update a meal log
+### Update a meal entry
 
-- Endpoint path: /logs/{id}
+- Endpoint path: /entries/{id}
 - Endpoint method: PUT
 - Query parameters:
 
@@ -226,10 +226,10 @@ category: str,
 }
     `
 
-- Response: The updated meal log
+- Response: The updated meal entry
 - Response shape (JSON):
   `json
-meal_log:{
+meal_entry:{
 	id: str,
 name: str,
 category: str,
@@ -239,20 +239,20 @@ category: str,
 }
     `
 
-### Delete a meal log
+### Delete a meal entry
 
-- Endpoint path: /logs/{id}
+- Endpoint path: /entries/{id}
 - Endpoint method: Delete
 
 - Headers:
 
   - Authorization: Bearer token
 
-- Response: True when a meal log is deleted
+- Response: True when a meal entry is deleted
 - Response shape (JSON):
   ```json
   {
-  Message: “This meal log has been deleted”
+  Message: “This meal entry has been deleted”
    }
   ```
 
@@ -274,7 +274,7 @@ Food Item:
 - Response: List of food items
 - Response shape (JSON):
   ```json
-  { fooditem:
+  { food_item:
   	{
         id: str,
     	food_name: str,
