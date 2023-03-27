@@ -133,9 +133,9 @@
 
 ```json
 {
-    name: str,
-    category: str,
-	date: DateTime,
+  name: str,
+  category: str,
+	date: Datetime,
 	calories: int,
 }
 ```
@@ -184,7 +184,7 @@ category: str,
 
 ## Get an entry by ID
 
-- Endpoint Path: /entries/{id}
+- Endpoint Path: /entries/{entry_id}
 - Endpoint Method: Get
 - Query parameters:
   - d: Datetime (where date = date)
@@ -264,7 +264,7 @@ Food Item:
 - Endpoint method: Get
 
 - Query Parameters:
-  \*food_name: str
+  *food_name: str
 
 *Request shape (form):
 *food_item: str
