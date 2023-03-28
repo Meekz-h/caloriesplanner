@@ -32,6 +32,7 @@ services:
       - ./api:/app
     environment:
       MONGO_URL: mongodb://admin:password@mongo
+      SIGNING_KEY: ${SIGNING_KEY}
   ghi:
     image: node:lts-bullseye
     command: /bin/bash run.sh

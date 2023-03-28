@@ -14,7 +14,7 @@
   full_name: str,
   email: str,
   username: str,
-  d_o_b: datetime.date,
+  age: int,
   goal : int | null
   }
 
@@ -26,7 +26,7 @@
     full_name: str,
     email: str,
     username: str,
-    d_o_b: datetime.date,
+    age: int,
     goal : int | null
   }
   ```
@@ -52,7 +52,7 @@
      full_name: str,
      email: str,
      username: str,
-     d_o_b: datetime.date,
+     age: int,
      goal: int | null
     },
   ```
@@ -78,7 +78,7 @@
      full_name: str,
      email: str,
      username: str,
-     d_o_b: datetime.date,
+     age: int,
      goal: int | null,
     },
   ```
@@ -91,7 +91,7 @@
      full_name: str,
      email: str,
      username: str,
-     d_o_b: datetime.date,
+     age: int,
      goal: int | null,
     },
   ```
