@@ -1,7 +1,7 @@
 from bson.objectid import ObjectId
 from queries.client import Queries
-from models.accounts import AccountIn, AccountOutWithHashedPassword
-from datetime import datetime
+from models.accounts import AccountIn, AccountOutWithHashedPassword, GoalIn, AccountOut
+
 
 class DuplicateAccountError(ValueError):
     pass
@@ -27,3 +27,12 @@ class AccountsRepo(Queries):
             return None
         result['id'] = str(result['_id'])
         return AccountOutWithHashedPassword(**result)
+
+    def update(self, id: str, goal_in: GoalIn ):
+        goal = goal_in.dict()
+        self.collection.find_one_and_update(
+            {'_id': ObjectId(id)}, {'$set': goal}
+            )
+        account = self.collection.find_one({'_id': ObjectId(id)})
+        account['id'] = str(account['_id'])
+        return AccountOut(**account)

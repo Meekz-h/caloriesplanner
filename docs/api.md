@@ -1,8 +1,8 @@
-# Users:
+# Accounts:
 
-### Create a user
+### Create an Acccount
 
-- Endpoint path: /users
+- Endpoint path: /api/accounts
 - Endpoint method: POST
 
 - Headers:
@@ -10,6 +10,7 @@
   - None
 
 - Request shape (form):
+```json
   {
   full_name: str,
   email: str,
@@ -17,7 +18,7 @@
   age: int,
   goal : int | null
   }
-
+```
 - Response: Account information and a token
 - Response shape (JSON):
   ```json
@@ -31,9 +32,9 @@
   }
   ```
 
-### Get a user by username
+### Get a user
 
-- Endpoint path: /users/{username}
+- Endpoint path: /accounts/
 - Endpoint method: GET
 
 - Headers:
@@ -57,9 +58,9 @@
     },
   ```
 
-### Update a user
+### Update a users goal
 
-- Endpoint path: /users/{username}
+- Endpoint path: /accounts/{username}
 - Endpoint method: PUT
 
 - Headers:
@@ -98,7 +99,7 @@
 
 ### Delete a user by username
 
-- Endpoint path: /users/{username}
+- Endpoint path: /accounts/{username}
 - Endpoint method: DELETE
 
 - Headers:
@@ -256,7 +257,7 @@ category: str,
    }
   ```
 
-Food Item:
+# Food Item:
 
 ### Get a list of food items
 

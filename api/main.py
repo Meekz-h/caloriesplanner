@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 import os
-from routers import entries, accounts
+from routers import entries, accounts, usda_api
 from authenticator import authenticator
 
 
@@ -19,3 +19,4 @@ app.add_middleware(
 app.include_router(accounts.router, tags=['Accounts'])
 app.include_router(authenticator.router, tags=['Accounts'])
 app.include_router(entries.router, tags=['Entries'])
+app.include_router(usda_api.router, tags=['USDA'])

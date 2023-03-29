@@ -1,5 +1,5 @@
 from fastapi import APIRouter, Request, Response, Depends, HTTPException, status
-from models.accounts import AccountIn, AccountForm, AccountToken, AccountOut
+from models.accounts import AccountIn, AccountForm, AccountToken, AccountOut, GoalIn
 from queries.accounts import AccountsRepo, DuplicateAccountError
 from authenticator import authenticator
 
@@ -36,3 +36,21 @@ async def get_token(
             "type": "Bearer",
             "account": account,
         }
+
+@router.put('/api/accounts/')
+async def update_account(
+    info: GoalIn,
+    request: Request,
+    response: Response,
+    repo: AccountsRepo = Depends(),
+    account_data: dict = Depends(authenticator.get_current_account_data),
+):
+    return repo.update(account_data["id"],info)
+
+
+@router.get('/api/accounts/',response_model=AccountOut)
+async def get_account(
+    account_data: dict = Depends(authenticator.get_current_account_data),
+    repo: AccountsRepo = Depends()
+):
+    return repo.get(account_data["username"])
