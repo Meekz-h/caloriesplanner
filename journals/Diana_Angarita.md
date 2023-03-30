@@ -31,3 +31,5 @@ day 7 (March 28/2023):
     1. -Today, we finished with the entries API, worked on an entry update, and started workig with the authentication and finished by the end of the day using the JWTdown library. We are doing great, and if I am not mistaken, we'll finish the back end by the end of this week.
 day 8 (March 29/2023):
     1. -finished the back-end of the project
+day 9 (March 30/2023):
+    1. -We received feedback on the API endpoints and authentication and implemented the suggested changes. We also cleaned up the code to improve readability and maintainability. Additionally, we installed Tailwind CSS to start working on the front end next week.
