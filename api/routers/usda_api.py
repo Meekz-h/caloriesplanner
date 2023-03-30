@@ -6,10 +6,10 @@ router = APIRouter()
 
 @router.get('/api/foods/', response_model=FoodList)
 def get_foods(
-    foodname: str,
+    food_name: str,
     queries: USDAQuery = Depends(),
 ):
-    foods = queries.get_list(foodname)
+    foods = queries.get_list(food_name)
 
     if not foods["foods"] :
         raise HTTPException(status_code=404, detail="Food not found")
