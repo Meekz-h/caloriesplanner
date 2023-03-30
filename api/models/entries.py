@@ -8,9 +8,12 @@ class MealParams(BaseModel):
     calories: int
 
 
+
 class MealEntry(MealParams):
     id: str
     date: datetime
+    account_id: str
+
 
 
 class MealEntries(BaseModel):
