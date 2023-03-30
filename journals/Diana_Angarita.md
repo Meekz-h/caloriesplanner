@@ -28,4 +28,6 @@ day 6 (March 27/2023):
     1. -We worked today on the Docker-compose.yaml. It was challenging because it wasn't working at the beginning. We worked through it, and we got it working.
     2. -We started working on the FASTapi and are progressing well. We are almost finished with the entry endpoints, and tomorrow, we'll finish the update entry.
 day 7 (March 28/2023):
-    1. -Today, we finished with the entries API, worked on an entry update, and started workig with the authentication and finished by the end of the day using the JWTdown library. We are doing great, and if I am not mistaken, we'll finish the back end by the end of this week.n
+    1. -Today, we finished with the entries API, worked on an entry update, and started workig with the authentication and finished by the end of the day using the JWTdown library. We are doing great, and if I am not mistaken, we'll finish the back end by the end of this week.
+day 8 (March 29/2023):
+    1. -finished the back-end of the project
