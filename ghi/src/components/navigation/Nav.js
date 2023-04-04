@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import {
   Navbar,
   MobileNav,
@@ -9,12 +10,13 @@ import {
 } from "@material-tailwind/react";
 import { useState, useEffect } from "react";
 
-function Nav()
-{
 
-  const [openNav, setOpenNav] = React.useState(false);
+function Nav() {
 
-  React.useEffect(() => {
+  const [openNav, setOpenNav] = useState(false);
+
+
+  useEffect(() => {
     window.addEventListener(
       "resize",
       () => window.innerWidth >= 960 && setOpenNav(false)
@@ -109,7 +111,10 @@ function Nav()
         <MobileNav open={openNav}>
           {navList}
           <Button variant="gradient" size="sm" fullWidth className="mb-2">
-            <span>Log In</span>
+            <span >Log In</span>
+          </Button>
+          <Button variant="gradient" size="sm" fullWidth className="mb-2">
+            <span >Sign Up</span>
           </Button>
         </MobileNav>
       </Navbar>
