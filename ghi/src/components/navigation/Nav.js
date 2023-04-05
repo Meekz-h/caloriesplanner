@@ -9,11 +9,15 @@ import {
   Card,
 } from "@material-tailwind/react";
 import { useState, useEffect } from "react";
-
-
+import { useGetAccountQuery, } from "../../services/Auth"
+import { useLogoutMutation } from "../../services/Auth";
+import { useNavigate } from "react-router-dom";
 function Nav() {
 
+  const [logout] = useLogoutMutation();
+  const Navigate = useNavigate();
   const [openNav, setOpenNav] = useState(false);
+  const { data: account } = useGetAccountQuery();
 
 
   useEffect(() => {
@@ -22,6 +26,12 @@ function Nav() {
       () => window.innerWidth >= 960 && setOpenNav(false)
     );
   }, []);
+  const handleLogOut = (e) => {
+    e.preventDefault();
+    logout();
+    Navigate("/", { replace: true });
+  };
+
 
   const navList = (
     <ul className="mb-4 mt-2 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
@@ -53,22 +63,54 @@ function Nav() {
     <>
       <Navbar className="sticky inset-0 z-10 h-max max-w-full rounded-none py-2 px-4 lg:px-8 lg:py-4">
         <div className="flex items-center justify-between text-blue-gray-900">
-          <Typography
-            as="a"
-            href="#"
-            className="mr-4 cursor-pointer py-1.5 font-medium"
-          >
-            CaloriePlanner
-          </Typography>
+          <Link to="">
+          <div>
+            <Typography
+              as="a"
+              className="mr-4 cursor-pointer py-1.5 font-medium"
+            >
+              CaloriePlanner
+            </Typography>
+            </div>
+            </Link>
+
           <div className="flex items-center gap-4">
             <div className="mr-4 hidden lg:block">{navList}</div>
-            <Button
+            {!account ? (
+              <Link to="/login">
+                <Button
+                  variant="gradient"
+                  size="sm"
+                  className="hidden lg:inline-block"
+                >
+                  <span>Log in</span>
+                </Button>
+              </Link>
+            ) : (
+              <div>
+                <span className="mr-2 inline font-semibold">
+                  {account.full_name}
+                </span>
+
+                <Link to="/">
+                  <Button
+                    variant="gradient"
+                    size="sm"
+                    className="hidden lg:inline-block"
+                    onClick={handleLogOut}
+                  >
+                    <span>Log out</span>
+                  </Button>
+                </Link>
+              </div>
+            )}
+            {/* <Button
               variant="gradient"
               size="sm"
               className="hidden lg:inline-block"
             >
               <span>Log in</span>
-            </Button>
+            </Button> */}
             <IconButton
               variant="text"
               className="ml-auto h-6 w-6 text-inherit hover:bg-transparent focus:bg-transparent active:bg-transparent lg:hidden"
@@ -111,14 +153,10 @@ function Nav() {
         <MobileNav open={openNav}>
           {navList}
           <Button variant="gradient" size="sm" fullWidth className="mb-2">
-            <span >Log In</span>
-          </Button>
-          <Button variant="gradient" size="sm" fullWidth className="mb-2">
-            <span >Sign Up</span>
+            <span>Log In</span>
           </Button>
         </MobileNav>
       </Navbar>
-
     </>
   );
 
