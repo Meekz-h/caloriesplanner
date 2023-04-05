@@ -35,3 +35,6 @@ day 9 (March 30/2023):
     1. -We received feedback on the API endpoints and authentication and implemented the suggested changes. We also cleaned up the code to improve readability and maintainability. Additionally, we installed Tailwind CSS to start working on the front end next week.
 day 10 (April 3/2023):
     1. -Started today with the front end, we installed a tailwind library called material tailwind. We started to work on the main page. gotta decide the banner, but so far everything is looking great.
+day 11 (April 4/2023):
+    1. -Finished working on MainPage, we will add more styling to it after we finish working on the authentication.
+    2. Started working on the authentication for the front-end.
