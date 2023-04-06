@@ -33,51 +33,52 @@ function LogIn() {
     } else {
       dispatch(reset());
     }
-
-
-
-
   };
 
   return (
-    <div className="h-screen flex items-center justify-center">
-      <Card color="transparent" shadow={false} className="mx-auto">
-        <Typography variant="h4" color="blue-gray">
-          Log In
-        </Typography>
-
-        <form
-          className="mt-8 mb-2 w-80 max-w-screen-lg sm:w-96"
-          onSubmit={handleSubmit}
-        >
-          <div className="mb-4 flex flex-col gap-6">
-            <Input
-              size="lg"
-              label="Username"
-              onChange={(e) => dispatch(handleUsernameChange(e.target.value))}
-            />
-            <Input
-              type="password"
-              size="lg"
-              label="Password"
-              onChange={(e) => dispatch(handlePasswordChange(e.target.value))}
-            />
+    <div>
+        <div className="relative overflow-hidden grid grid-cols-12 banner_login">
+          <div className="col-span-3 text-white font-sans font-bold bg-black pl-7 h-screen">
+            <div className="grid grid-rows-6 grid-flow-col min-h-screen items-center justify-items-start px-4 sm:px-6 lg:px-8">
+              <div className="row-span-4 row-start-2 text-4xl">
+                Log In
+                <form onSubmit={handleSubmit}>
+                  <div className="pt-10">
+                    <label className="text-sm font-sans font-medium">
+                      Username
+                    </label>
+                    <input type="text" label="Username" onChange={(e) => dispatch(handleUsernameChange(e.target.value))} name="username" placeholder="Enter your username" className="w-full bg-black py-3 px-12 border hover: border-gray-500 rounded shadow text-base font-sans" />
+                  </div>
+                  <div className="pt-2">
+                    <label className="text-sm font-sans font-medium">
+                      Password
+                    </label>
+                    <input type="password" label="Password" onChange={(e) => dispatch(handlePasswordChange(e.target.value))} name="password" placeholder="Enter your password" className=" w-full bg-black py-3 px-12 border hover: border-gray-500 rounded shadow text-base font-sans" />
+                  </div>
+                  {/* Button */}
+                  <div className="text-sm font-sans font-medium w-full pt-14">
+                    <button type="submit" className="text-center w-full py-4 bg-blue-700 hover:bg-blue-400 rounded-md text-white">
+                      Log In
+                    </button>
+                  </div>
+                </form>
+              </div>
+              {/* Text */}
+              <a href className="text-sm font-sans font-medium text-gray-400 underline">
+                <Link
+                  to="/signup"
+                  className="font-medium text-blue-500 transition-colors hover:text-blue-700">
+                  Don´t have an account? Sign up
+                </Link>
+              </a>
+            </div>
           </div>
-          <Button className="mt-6" fullWidth type="submit">
-            Log In
-          </Button>
-          <Typography color="gray" className="mt-4 text-center font-normal">
-            Don't have an account?{" "}
-            <Link
-              to="/signup"
-              className="font-medium text-blue-500 transition-colors hover:text-blue-700"
-            >
-              Sign up
-            </Link>
-          </Typography>
-        </form>
-      </Card>
-    </div>
+            {/* Second column image */}
+            <div className="banner_login col-span-9 text-white font-sans font-bold max-w-full h-auto object-fit-contain m-auto bg-no-repeat bg-cover">
+            {/* Aquí iría algún comentario */}
+          </div>
+        </div>
+      </div>
   );
 }
 
