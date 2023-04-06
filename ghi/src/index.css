@@ -11,6 +11,19 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.banner-card{
+  margin-top: -170px;
+  background: hsla(0, 0%, 100%, 0.7);
+  backdrop-filter: blur(30px);
+
+}
+.banner {
+  background-image: url("./static/hero\ img.webp");
+  background-size: cover;
+  background-position: 50%;
+  height: 500px;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
