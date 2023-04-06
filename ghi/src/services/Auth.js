@@ -26,6 +26,16 @@ export const authApi = createApi({
             },
             invalidatesTags: ['Account', { type: 'Things', id: 'LIST' }]
         }),
+        signup: builder.mutation({
+            query: (body) => {
+                return {
+                    url: '/accounts',
+                    method: 'POST',
+                    body,
+                }
+            },
+            invalidatesTags: ['Account', { type: 'Things', id: 'LIST' }]
+        }),
         logout: builder.mutation({
             query: () => ({
                 url: '/token',
@@ -36,4 +46,4 @@ export const authApi = createApi({
     })
 })
 
-export const { useGetAccountQuery, useLogoutMutation, useLoginMutation } = authApi;
+export const { useGetAccountQuery, useLogoutMutation, useLoginMutation, useSignupMutation } = authApi;
