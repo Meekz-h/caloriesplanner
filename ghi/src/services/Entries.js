@@ -1,43 +1,96 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
 
 export const EntriesApi = createApi({
-    reducerPath: "EntriesApi",
-    baseQuery: fetchBaseQuery({
-        baseUrl: `${process.env.REACT_APP_SAMPLE_SERVICE_API_HOST}/api/entries`,
-        credentials: "include",
-    }),
-    endpoints: (builder) => ({
-        deleteEntry: builder.mutation({
-            query: (id) => ({
-                url: id,
-                method: 'DELETE'
+  reducerPath: "EntriesApi",
+  baseQuery: fetchBaseQuery({
+    baseUrl: `${process.env.REACT_APP_SAMPLE_SERVICE_API_HOST}`,
+    credentials: "include",
+  }),
+  tagTypes: ['Account', 'Entries'],
+  endpoints: (builder) => ({
+    deleteEntry: builder.mutation({
+      query: (id) => ({
+        url: `/api/entries/${id}`,
+        method: 'DELETE'
       }),
-      invalidatesTags: (result, error, {id}) => [{type: 'Entries', id}]
+      invalidatesTags: (result, error, { id }) => [{ type: 'Entries', id }]
     }),
     createEntry: builder.mutation({
       query: (body) => ({
-        url: '',
+        url: '/api/entries',
         method: 'POST',
         body
       }),
       invalidatesTags: [{ type: 'Entries', id: 'LIST' }]
     }),
     getEntries: builder.query({
-        query: () => '',
-        transformResponse: (response) => response.Entries,
-        providesTags: (result) => {
-          const tags = [{ type: 'Entries', id: 'LIST' }]
-          if (!result) return tags;
-          return [
-            ...result.map(({id}) => ({type: 'Entries', id})),
-            ...tags
-          ]
-        }
-    })
-  }),
-})
+      query: () => '/api/entries',
+      transformResponse: (response) => response.Entries,
+      providesTags: (result) => {
+        const tags = [{ type: 'Entries', id: 'LIST' }]
+        if (!result) return tags;
+        return [
+          ...result.map(({ id }) => ({ type: 'Entries', id })),
+          ...tags
+        ]
+      }
+    }),
+    getAccount: builder.query({
+      query: () => "/token",
+      transformResponse: (response) => response?.account,
+      providesTags: ["Account"],
+    }),
 
-export const { useCreateEntryMutation, useDeleteEntryMutation, useGetEntriesQuery } = EntriesApi;
+    login: builder.mutation({
+      query: (body) => {
+        const formData = new FormData();
+        formData.append("username", body.username);
+        formData.append("password", body.password);
+        return {
+          url: "/token",
+          method: "POST",
+          body: formData,
+          credentials: "include",
+        };
+      },
+      invalidatesTags: ["Account", "Entries"]
+    }),
+    signup: builder.mutation({
+      query: (body) => {
+        return {
+          url: "/api/accounts",
+          method: "POST",
+          body,
+        };
+      },
+      invalidatesTags: ["Account", "Entries"],
+    }),
+    logout: builder.mutation({
+      query: () => ({
+        url: "/token",
+        method: "DELETE",
+      }),
+      invalidatesTags: ["Account", "Entries"],
+    }),
+  }),
+});
+
+
+
+
+
+
+
+
+
+export const {
+  useCreateEntryMutation,
+  useDeleteEntryMutation,
+  useGetEntriesQuery,
+  useGetAccountQuery,
+  useLogoutMutation,
+  useLoginMutation,
+  useSignupMutation} = EntriesApi;
 
 
 

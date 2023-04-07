@@ -9,8 +9,8 @@ import {
   Card,
 } from "@material-tailwind/react";
 import { useState, useEffect } from "react";
-import { useGetAccountQuery, } from "../../services/Auth"
-import { useLogoutMutation } from "../../services/Auth";
+import { useGetAccountQuery, } from "../../services/Entries"
+import { useLogoutMutation } from "../../services/Entries";
 import { useNavigate } from "react-router-dom";
 function Nav() {
 

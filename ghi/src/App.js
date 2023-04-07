@@ -8,7 +8,7 @@ import Footer from './components/navigation/Footer.js'
 import LogIn from './components/authorization/LogIn';
 import SignUp from './components/authorization/SignUp';
 import AuthMainPage from './components/mainpage/AuthMainPage';
-import { useGetAccountQuery } from './services/Auth';
+import { useGetAccountQuery } from './services/Entries';
 function App() {
   const { data: account } = useGetAccountQuery();
 
