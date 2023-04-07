@@ -41,3 +41,5 @@ day 11 (April 4/2023):
 day 12 (April 5/2023):
     1. -Today we stopped to understand more about the authentication with redux toolkit
     2. finished working in the login form.
+day 13 (April 6/2023):
+    1. -Today we finished the authorization in the front-end and it functioning without bugs. We also added error handling in the login and sign up form.
