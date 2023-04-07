@@ -3,7 +3,6 @@ import newEntriesReducer from '../features/entries/newEntriesSlice'
 import loginReducer from '../features/auth/LogInSlice'
 import { setupListeners } from '@reduxjs/toolkit/query'
 import { EntriesApi } from '../services/Entries'
-import { authApi } from '../services/Auth'
 import signupReducer from '../features/auth/SignUpSlice'
 
 export const store = configureStore({
@@ -12,9 +11,8 @@ export const store = configureStore({
     login: loginReducer,
     signup: signupReducer,
     [EntriesApi.reducerPath]: EntriesApi.reducer,
-    [authApi.reducerPath]: authApi.reducer
   },
-  middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat([EntriesApi.middleware, authApi.middleware])
+  middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat([EntriesApi.middleware])
 })
 
 setupListeners(store.dispatch)

@@ -12,7 +12,7 @@ import {
   error,
   reset,
 } from "../../features/auth/LogInSlice";
-import { useLoginMutation } from "../../services/Auth";
+import { useLoginMutation } from "../../services/Entries";
 import { Link, useNavigate } from "react-router-dom";
 import ErrorMessage from "./ErrorMessage";
 
@@ -33,9 +33,6 @@ function LogIn() {
       dispatch(reset());
       Navigate("/", { replace: true });
     }
-
-
-
   };
 
   return (

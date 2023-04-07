@@ -18,7 +18,7 @@ import {
   error,
 } from "../../features/auth/SignUpSlice";
 import ErrorMessage from "./ErrorMessage";
-import { useSignupMutation } from "../../services/Auth"
+import { useSignupMutation } from "../../services/Entries"
 import { useNavigate } from "react-router-dom";
 
 
