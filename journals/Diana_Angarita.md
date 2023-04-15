@@ -44,3 +44,4 @@ day 12 (April 5/2023):
 day 13 (April 6/2023):
     1. -Today we finished the authorization in the front-end and it functioning without bugs. We also added error handling in the login and sign up form.
 day 14 (April 7/2023):
+    1. -Today we worked on discussing the styling of the application.
