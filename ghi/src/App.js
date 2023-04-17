@@ -4,6 +4,7 @@ import './App.css';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Nav from './components/navigation/Nav.js';
 import MainPage from './components/mainpage/MainPage.js';
+import AboutUs from './components/mainpage/AboutUs';
 import Footer from './components/navigation/Footer.js'
 import LogIn from './components/authorization/LogIn';
 import SignUp from './components/authorization/SignUp';
