@@ -9,6 +9,9 @@ import LogIn from './components/authorization/LogIn';
 import SignUp from './components/authorization/SignUp';
 import AuthMainPage from './components/mainpage/AuthMainPage';
 import { useGetAccountQuery } from './services/Entries';
+import AboutUs from './components/mainpage/AboutUs';
+
+
 function App() {
   const { data: account } = useGetAccountQuery();
 
@@ -25,6 +28,7 @@ function App() {
             />
             <Route path="login" element={<LogIn />} />
             <Route path="signup" element={<SignUp />} />
+            <Route path="about" element={<AboutUs />} />
           </Route>
         </Routes>
       </div>
