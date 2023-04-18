@@ -1,29 +1,41 @@
-import { createSlice } from '@reduxjs/toolkit'
+import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  name: '',
-  category: '',
-  calories: 0,
-}
+  fields: {
+    name: "",
+    category: "",
+    calories: 0,
+  },
+  errorMessage: null,
+};
 
 export const newEntriesSlice = createSlice({
-  name: 'counter',
+  name: "entries",
   initialState,
   reducers: {
     handleNameChange: (state, action) => {
-      state.name = action.payload
+      state.fields.name = action.payload;
     },
     handleCategoryChange: (state, action) => {
-      state.category = action.payload
+      state.fields.category = action.payload;
     },
     handleCalorieChange: (state, action) => {
-      state.calories = action.payload
+      state.fields.calories = action.payload;
     },
-    reset: () => initialState
+    error: (state, action) => {
+      state.errorMessage = action.payload;
+    },
+    reset: () => initialState,
   },
-})
+});
 
 // Action creators are generated for each case reducer function
-export const { handleNameChange, handleCategoryChange, handleCalorieChange, reset } = newEntriesSlice.actions;
+export const {
+  handleNameChange,
+  handleCategoryChange,
+  handleCalorieChange,
+  reset,
+  error,
+} = newEntriesSlice.actions;
 
 export default newEntriesSlice.reducer;
