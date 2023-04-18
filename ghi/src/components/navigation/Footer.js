@@ -20,7 +20,7 @@ function Footer() {
             <li>
                 <Typography
                 as="a"
-                href="#"
+                href="/about"
                 color="black"
                 className="font-normal transition-colors hover:text-blue-500 focus:text-blue-500"
                 >
@@ -30,7 +30,7 @@ function Footer() {
             <li>
                 <Typography
                 as="a"
-                href="#"
+                href="/contact"
                 color="black"
                 className="font-normal transition-colors hover:text-blue-500 focus:text-blue-500"
                 >
