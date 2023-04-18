@@ -45,3 +45,8 @@ day 13 (April 6/2023):
     1. -Today we finished the authorization in the front-end and it functioning without bugs. We also added error handling in the login and sign up form.
 day 14 (April 7/2023):
     1. -Today we worked on discussing the styling of the application.
+day 15 (April 17/2023):
+    1. -Today, we began working on two forms: the "Meal Form" and the "Log a Meal Form," which will be central to the essence of the application.
+    2. -We have implemented the design for the sign-up form and resolved some console errors.
+    3. -We have also designed the "About Us" page, where we have included the story of the app and added a "Meet the Team" section with links to each team member's LinkedIn and GitHub pages.
+day 16 (April 18/2023)

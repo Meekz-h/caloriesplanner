@@ -1,14 +1,6 @@
 import { Card, Input, Checkbox, Button, Typography } from "@material-tailwind/react";
 import { useSelector, useDispatch } from "react-redux";
 import {
-  Card,
-  Input,
-  Checkbox,
-  Button,
-  Typography,
-} from "@material-tailwind/react";
-import { useSelector, useDispatch } from "react-redux";
-import {
   handleFullNameChange,
   handleEmailChange,
   handleUsernameChange,

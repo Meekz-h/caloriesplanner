@@ -70,6 +70,31 @@ function Nav() {
           >
             <img src={logo} alt="logo" className="object-contain" />
           </Link>
+          <div className="m-auto flex items-center gap-10 text-xl">
+          <span
+            className="p-1 font-normal justify-self-center flex-auto"
+          >
+            <Link to="/" className="flex items-center">
+              Home
+            </Link>
+          </span>
+          <span
+            className="p-1 font-normal justify-self-center flex-auto"
+          >
+            <Link to="/about" className="flex items-center">
+              About Us
+            </Link>
+          </span>
+          {!account ? (<></>) : (
+                  <span
+                    className="p-1 font-normal justify-self-center"
+                  >
+                    <Link to="/meals" className="flex items-center">
+                      Meals
+                    </Link>
+                  </span>
+                  )}
+          </div>
           <div className="flex items-center gap-4">
             {/* <Link className="mr-4 hidden lg:block" to="/login"> */}
               {/* {navList} */}
@@ -84,10 +109,20 @@ function Nav() {
                   </Button>
                 </Link>
               ) : (
+              <>
                 <div>
-                  <span className="mr-2 inline font-semibold">
-                    {account.full_name}
-                  </span>
+                  {/* <Typography
+                    as="p"
+                    variant="large"
+                    color="blue-gray"
+                    className="p-1 font-normal"
+                  >
+                    <Link to="/meals" className="flex items-center">
+                      Meals
+                    </Link>
+                    </Typography> */}
+                </div>
+                <div>
                   <Link to="/">
                     <Button
                       variant="gradient"
@@ -98,7 +133,11 @@ function Nav() {
                       <span>Log out</span>
                     </Button>
                   </Link>
+                  <span className="ml-2 inline font-semibold">
+                    {account.full_name}
+                  </span>
                 </div>
+              </>
               )}
             {/* </Link> */}
             <IconButton
