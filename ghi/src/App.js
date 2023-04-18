@@ -10,6 +10,8 @@ import SignUp from './components/authorization/SignUp';
 import AuthMainPage from './components/mainpage/AuthMainPage';
 import { useGetAccountQuery } from './services/Entries';
 import AboutUs from './components/mainpage/AboutUs';
+import LogAMeal from './components/meals/LogAMeal';
+import ErrorMessage from './components/authorization/ErrorMessage';
 
 
 function App() {
@@ -29,6 +31,7 @@ function App() {
             <Route path="login" element={<LogIn />} />
             <Route path="signup" element={<SignUp />} />
             <Route path="about" element={<AboutUs />} />
+            <Route path="meals" element={!account ? <ErrorMessage /> : <LogAMeal/>} />
           </Route>
         </Routes>
       </div>

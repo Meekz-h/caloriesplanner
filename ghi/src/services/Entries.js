@@ -6,31 +6,40 @@ export const EntriesApi = createApi({
     baseUrl: `${process.env.REACT_APP_SAMPLE_SERVICE_API_HOST}`,
     credentials: "include",
   }),
-  tagTypes: ['Account', 'Entries'],
+  tagTypes: ["Account", "Entries"],
   endpoints: (builder) => ({
     deleteEntry: builder.mutation({
       query: (id) => ({
         url: `/api/entries/${id}`,
-        method: 'DELETE'
+        method: "DELETE",
       }),
-      invalidatesTags: (result, error, { id }) => [{ type: 'Entries', id }]
+      invalidatesTags: (result, error, { id }) => [{ type: "Entries", id }],
     }),
     createEntry: builder.mutation({
       query: (body) => ({
-        url: '/api/entries',
-        method: 'POST',
-        body
+        url: "/api/entries",
+        method: "POST",
+        body,
       }),
-      invalidatesTags: [{ type: 'Entries', id: 'LIST' }]
+      invalidatesTags: [{ type: "Entries", id: "LIST" }],
     }),
     getEntries: builder.query({
-      query: () => '/api/entries',
+      query: () => "/api/entries",
       transformResponse: (response) => response.Entries,
       providesTags: (result) => {
-        const tags = [{ type: 'Entries', id: 'LIST' }]
+        const tags = [{ type: "Entries", id: "LIST" }];
+        if (!result) return tags;
+        return [...result.map(({ id }) => ({ type: "Entries", id })), ...tags];
+      },
+    }),
+    getUsdaMeals: builder.query({
+      query: (body) => `/api/foods/?food_name=${body}`,
+      transformResponse: (response) => response.foods,
+      providesTags: (result) => {
+        const tags = [{ type: 'USDA', id: 'LIST' }]
         if (!result) return tags;
         return [
-          ...result.map(({ id }) => ({ type: 'Entries', id })),
+          ...result.map(({ id }) => ({ type: 'USDA', id })),
           ...tags
         ]
       }
@@ -53,7 +62,7 @@ export const EntriesApi = createApi({
           credentials: "include",
         };
       },
-      invalidatesTags: ["Account", "Entries"]
+      invalidatesTags: ["Account", "Entries"],
     }),
     signup: builder.mutation({
       query: (body) => {
@@ -90,7 +99,10 @@ export const {
   useGetAccountQuery,
   useLogoutMutation,
   useLoginMutation,
-  useSignupMutation} = EntriesApi;
+  useSignupMutation,
+  useGetUsdaMealsQuery, } = EntriesApi;
+
+
 
 
 
