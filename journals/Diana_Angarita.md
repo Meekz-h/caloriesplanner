@@ -50,3 +50,4 @@ day 15 (April 17/2023):
     2. -We have implemented the design for the sign-up form and resolved some console errors.
     3. -We have also designed the "About Us" page, where we have included the story of the app and added a "Meet the Team" section with links to each team member's LinkedIn and GitHub pages.
 day 16 (April 18/2023)
+    1. -
