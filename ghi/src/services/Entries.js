@@ -25,7 +25,7 @@ export const EntriesApi = createApi({
     }),
     getEntries: builder.query({
       query: () => "/api/entries",
-      transformResponse: (response) => response.Entries,
+      transformResponse: (response) => response.meals,
       providesTags: (result) => {
         const tags = [{ type: "Entries", id: "LIST" }];
         if (!result) return tags;
