@@ -14,7 +14,7 @@ body {
 .banner-card{
   margin-top: -170px;
   background: hsla(0, 0%, 100%, 0.7);
-  backdrop-filter: blur(30px);
+  /* backdrop-filter: blur(30px); */
 
 }
 .banner {
@@ -28,5 +28,3 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-
-
