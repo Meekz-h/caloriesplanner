@@ -45,7 +45,9 @@ function MealHistory(filter) {
                                     <td>{new Date(entry.date).toLocaleString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</td>
                                     </tr>)
                             })))}
-                        <tr>{total_cal}</tr>
+                        <tr>
+                            <td>{total_cal}</td>
+                        </tr>
                     </tbody>
                 </table>
             </div>
