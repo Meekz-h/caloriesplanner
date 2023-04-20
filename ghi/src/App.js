@@ -7,7 +7,7 @@ import MainPage from './components/mainpage/MainPage.js';
 import Footer from './components/navigation/Footer.js'
 import LogIn from './components/authorization/LogIn';
 import SignUp from './components/authorization/SignUp';
-import AuthMainPage from './components/mainpage/AuthMainPage';
+import AuthMainPage from './components/mainpage/authcomponents/AuthMainPage';
 import { useGetAccountQuery } from './services/Entries';
 import AboutUs from './components/mainpage/AboutUs';
 import LogAMeal from './components/meals/LogAMeal';
