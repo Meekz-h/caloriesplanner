@@ -12,6 +12,7 @@ import { useGetAccountQuery } from './services/Entries';
 import AboutUs from './components/mainpage/AboutUs';
 import LogAMeal from './components/meals/LogAMeal';
 import ErrorMessage from './components/authorization/ErrorMessage';
+import Contact from './components/mainpage/Contact';
 
 
 function App() {
@@ -32,6 +33,7 @@ function App() {
             <Route path="signup" element={<SignUp />} />
             <Route path="about" element={<AboutUs />} />
             <Route path="meals" element={!account ? <ErrorMessage /> : <LogAMeal/>} />
+            <Route path="contact" element={<Contact />} />
           </Route>
         </Routes>
       </div>

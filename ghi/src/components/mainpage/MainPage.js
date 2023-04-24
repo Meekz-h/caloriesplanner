@@ -27,10 +27,10 @@ function MainPage() {
                             className="relative overflow-hidden bg-no-repeat bg-cover shadow-lg rounded-lg mx-4 -mt-4 w-full"
                             data-mdb-ripple="true" data-mdb-ripple-color="light">
                             <img src="https://mdbcdn.b-cdn.net/img/new/avatars/8.jpg" alt="testimonial" className="w-full" />
-                              <div
-                              className="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed opacity-0 hover:opacity-100 transition duration-300 ease-in-out"
-                              >
-                              </div>
+                                <div
+                                className="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed opacity-0 hover:opacity-100 transition duration-300 ease-in-out"
+                                >
+                                </div>
                             </div>
                         </div>
                         <div className="p-6">
