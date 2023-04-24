@@ -1,7 +1,6 @@
 import {
   Card,
   Input,
-  Checkbox,
   Button,
   Typography,
 } from "@material-tailwind/react";
@@ -15,6 +14,7 @@ import {
 import { useLoginMutation } from "../../services/Entries";
 import { Link, useNavigate } from "react-router-dom";
 import ErrorMessage from "./ErrorMessage";
+import { login_vector } from "../../assets/static";
 
 function LogIn() {
   const dispatch = useDispatch();
@@ -36,45 +36,67 @@ function LogIn() {
   };
 
   return (
-    <div className="h-screen flex items-center justify-center">
-      <Card color="transparent" shadow={false} className="mx-auto">
-        {errorMessage && <ErrorMessage>{errorMessage}</ErrorMessage>}
-        <Typography variant="h4" color="blue-gray">
-          Log In
-        </Typography>
-
-        <form
-          className="mt-8 mb-2 w-80 max-w-screen-lg sm:w-96"
-          onSubmit={handleSubmit}
-        >
-          <div className="mb-4 flex flex-col gap-6">
-            <Input
-              size="lg"
-              label="Username"
-              onChange={(e) => dispatch(handleUsernameChange(e.target.value))}
-            />
-            <Input
-              type="password"
-              size="lg"
-              label="Password"
-              onChange={(e) => dispatch(handlePasswordChange(e.target.value))}
+    <section className="h-screen">
+      <div className="h-full">
+        <div className="g-6 flex h-full flex-wrap items-center justify-center lg:justify-between">
+          <div className="shrink-1 mb-12 ml-10 grow-0 basis-auto md:mb-0 md:w-9/12 md:shrink-0 lg:w-6/12 xl:w-6/12">
+            <img
+              src={login_vector}
+              className="object-cover mt-[-20%] mr-20"
+              alt="form in a computer"
+              style={{ width: "80%", height: "80%" }}
             />
           </div>
-          <Button className="mt-6" fullWidth type="submit">
-            Log In
-          </Button>
-          <Typography color="gray" className="mt-4 text-center font-normal">
-            Don't have an account?{" "}
-            <Link
-              to="/signup"
-              className="font-medium text-blue-500 transition-colors hover:text-blue-700"
+          <div className="mb-12 mr-5 md:mb-0 md:w-8/12 lg:w-5/12 xl:w-5/12">
+            <form
+              className="mt-[-30%] mb-2  w-80 max-w-screen-lg sm:w-96"
+              onSubmit={handleSubmit}
             >
-              Sign up
-            </Link>
-          </Typography>
-        </form>
-      </Card>
-    </div>
+              {errorMessage && <ErrorMessage>{errorMessage}</ErrorMessage>}
+              <Typography
+                variant="h4"
+                color="blue-gray"
+                className="text-center text-3xl mb-4"
+              >
+                Log In
+              </Typography>
+              <div className="relative mt-1 mb-6" data-te-input-wrapper-init>
+                <Input
+                  size="lg"
+                  label="Username"
+                  type={`text`}
+                  onChange={(e) =>
+                    dispatch(handleUsernameChange(e.target.value))
+                  }
+                />
+              </div>
+              <div className="relative mb-6" data-te-input-wrapper-init>
+                <Input
+                  type={`password`}
+                  size="lg"
+                  label="Password"
+                  onChange={(e) =>
+                    dispatch(handlePasswordChange(e.target.value))
+                  }
+                />
+              </div>
+              <div className="flex justify-center items-center">
+                <Button type="submit">Log In</Button>
+              </div>
+              <Typography color="gray" className="mt-4 text-center font-normal">
+                Don't have an account?{" "}
+                <Link
+                  to="/signup"
+                  className="font-medium text-blue-500 transition-colors hover:text-blue-700"
+                >
+                  Sign up
+                </Link>
+              </Typography>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
   );
 }
 

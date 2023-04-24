@@ -71,44 +71,45 @@ function Nav() {
             <img src={logo} alt="logo" className="object-contain" />
           </Link>
           <div className="m-auto flex items-center gap-10 text-xl">
-          <span
-            className="p-1 font-normal justify-self-center flex-auto"
-          >
-            <Link to="/" className="flex items-center">
-              Home
-            </Link>
-          </span>
-          <span
-            className="p-1 font-normal justify-self-center flex-auto"
-          >
-            <Link to="/about" className="flex items-center">
-              About Us
-            </Link>
-          </span>
-          {!account ? (<></>) : (
-                  <span
-                    className="p-1 font-normal justify-self-center"
-                  >
-                    <Link to="/meals" className="flex items-center">
-                      Meals
-                    </Link>
-                  </span>
-                  )}
+            <span className="p-1 font-normal justify-self-center flex-auto">
+              <Link to="/" className="flex items-center">
+                Home
+              </Link>
+            </span>
+            <span className="p-1 font-normal justify-self-center flex-auto">
+              <Link to="/about" className="flex items-center">
+                About Us
+              </Link>
+            </span>
+            {!account ? (
+              <></>
+            ) : (
+              <span className="p-1 font-normal justify-self-center">
+                <Link to="/meals" className="flex items-center">
+                  Meals
+                </Link>
+              </span>
+            )}
+            <span className="p-1 font-normal justify-self-center flex-auto">
+              <Link to="/contact" className="flex items-center">
+                Contact
+              </Link>
+            </span>
           </div>
           <div className="flex items-center gap-4">
             {/* <Link className="mr-4 hidden lg:block" to="/login"> */}
-              {/* {navList} */}
-              {!account ? (
-                <Link to="/login">
-                  <Button
-                    variant="gradient"
-                    size="sm"
-                    className="hidden lg:inline-block"
-                  >
-                    <span>Log in</span>
-                  </Button>
-                </Link>
-              ) : (
+            {/* {navList} */}
+            {!account ? (
+              <Link to="/login">
+                <Button
+                  variant="gradient"
+                  size="sm"
+                  className="hidden lg:inline-block"
+                >
+                  <span>Log in</span>
+                </Button>
+              </Link>
+            ) : (
               <>
                 <div>
                   {/* <Typography
@@ -138,7 +139,7 @@ function Nav() {
                   </span>
                 </div>
               </>
-              )}
+            )}
             {/* </Link> */}
             <IconButton
               variant="text"
