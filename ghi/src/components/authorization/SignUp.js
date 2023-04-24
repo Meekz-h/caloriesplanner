@@ -20,6 +20,7 @@ import {
 import ErrorMessage from "./ErrorMessage";
 import { useSignupMutation } from "../../services/Entries";
 import { useNavigate } from "react-router-dom";
+import { signup_vector } from "../../assets/static";
 
 const SignUp = () => {
   const dispatch = useDispatch();
@@ -48,17 +49,16 @@ const SignUp = () => {
       dispatch(reset());
       Navigate("/", { replace: true });
     }
-    console.log(response);
   };
 
   return (
     <section className="h-screen">
       <div className="h-full">
         <div className="g-6 flex h-full flex-wrap items-center justify-center lg:justify-between">
-          <div className="shrink-1 mb-12 grow-0 basis-auto md:mb-0 md:w-9/12 md:shrink-0 lg:w-6/12 xl:w-6/12">
+          <div className="flex justify-center items-center h-screen shrink-1 mb-12 grow-0 basis-auto md:mb-0 md:w-9/12 md:shrink-0 lg:w-6/12 xl:w-6/12">
             <img
-              src="https://tecdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.webp"
-              className="w-full"
+              src={signup_vector}
+              className="object-cover mt-[-20%] w-1/2 h-1/2"
               alt="form in a computer"
             />
           </div>
@@ -75,7 +75,7 @@ const SignUp = () => {
               >
                 Sign Up
               </Typography>
-              <Typography color="gray" className="mt-1 font-normal">
+              <Typography color="gray" className="mt-2 mb-2 font-normal">
                 Enter your details to register.
               </Typography>
               <div className="relative mb-6" data-te-input-wrapper-init>
@@ -156,9 +156,11 @@ const SignUp = () => {
                   }
                 />
               </div>
-              <Button type="submit" className="mt-2">
-                Register
-              </Button>
+              <div className="flex justify-center items-center">
+                <Button type="submit" className="mt-2">
+                  Register
+                </Button>
+              </div>
             </form>
           </div>
         </div>

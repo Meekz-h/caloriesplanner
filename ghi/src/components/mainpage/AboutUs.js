@@ -1,6 +1,8 @@
+import { Link } from "react-router-dom";
+
 import { diana } from "../../assets/static";
 import { brian } from "../../assets/static";
-import { Link } from "react-router-dom";
+
 
 function AboutUs() {
     return (
