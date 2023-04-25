@@ -4,13 +4,14 @@ from queries.usda_api import USDAQuery
 
 router = APIRouter()
 
-@router.get('/api/foods/', response_model=FoodList)
+
+@router.get("/api/foods/", response_model=FoodList)
 def get_foods(
     food_name: str,
     queries: USDAQuery = Depends(),
 ):
     foods = queries.get_list(food_name)
 
-    if not foods["foods"] :
+    if not foods["foods"]:
         raise HTTPException(status_code=404, detail="Food not found")
     return foods
