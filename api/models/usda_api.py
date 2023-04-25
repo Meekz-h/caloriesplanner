@@ -7,5 +7,6 @@ class FoodItem(BaseModel):
     calories: int | None
     brand_name: str | None
 
+
 class FoodList(BaseModel):
     foods: List[FoodItem]

@@ -88,3 +88,9 @@
     1. - Worked on the filtering feature for the meals entries feature by date
     2. - We were able to work on the layout for the authorized main page
     3. - Installed the react google charts library and were able to test it.
+
+### day 19 (April 24/2023)
+
+    1. - Worked on the contact form feature, installed Emailjs and added to the contact form so that way users can send email to the foodie team
+    2. - Fixed the layout/style of the log in form
+    3. - Worked on the authorized main page, we added the meal history for the current day to the second card.

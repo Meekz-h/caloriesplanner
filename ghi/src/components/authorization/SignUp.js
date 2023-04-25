@@ -1,11 +1,11 @@
 import {
-  Card,
   Input,
-  Checkbox,
   Button,
   Typography,
 } from "@material-tailwind/react";
 import { useSelector, useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
+
 import {
   handleFullNameChange,
   handleEmailChange,
@@ -19,7 +19,6 @@ import {
 } from "../../features/auth/SignUpSlice";
 import ErrorMessage from "./ErrorMessage";
 import { useSignupMutation } from "../../services/Entries";
-import { useNavigate } from "react-router-dom";
 import { signup_vector } from "../../assets/static";
 
 const SignUp = () => {

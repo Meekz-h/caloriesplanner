@@ -10,6 +10,7 @@ class AccountOut(BaseModel):
     age: int
     goal: int | None
 
+
 class AccountOutWithHashedPassword(AccountOut):
     hashed_password: str
 
@@ -30,6 +31,7 @@ class AccountForm(BaseModel):
 
 class AccountToken(Token):
     account: AccountOut
+
 
 class GoalIn(BaseModel):
     goal: int | None
