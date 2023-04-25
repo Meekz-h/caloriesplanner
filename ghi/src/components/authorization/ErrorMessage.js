@@ -12,7 +12,7 @@ const ErrorMessage = (props) => (
         </svg>
         </div>
         <div>
-        <strong className="font-bold text-xl">Error: </strong>
+        <strong className="font-bold">Error!</strong>
         <span className="block sm:inline">{props.children}</span>
         </div>
     </div>
