@@ -1,16 +1,65 @@
-# Module3 Project Gamma
+# CaloriesPlanner
+* Mico Hernandez
+* Diana Angarita
+* Abdalla Modawi
+* Ali Bhatti
+* Brian Vazquez
 
-## Getting started
+CaloriesPlanner – Easy and convenient way to track your calories and meet your goals.
 
-You have a project repository, now what? The next section
-lists all of the deliverables that are due at the end of the
-week. Below is some guidance for getting started on the
-tasks for this week.
+CaloriesPlanner - Health
+
+CaloriesPlanner - Track your calories.
+
+## Design
+
+* [API design](docs/apis.md)
+* [Integrations](docs/integrations.md)
+
+## Images
+
+* ![About-us](/docs/Wireframe/About-us.png)
+* ![Authenticated-mainpage](/docs/Wireframe/Authenticated-mainpage.png)
+* ![log-a-meal](/docs/Wireframe/Log-a-meal.png)
+* ![login](/docs/Wireframe/Login.png)
+* ![signup](/docs/Wireframe/Signup.png)
+* ![unauthenticated-mainpage](/docs/Wireframe/Unauthenticated-mainpage.png)
+
 
 ## Install Extensions
 
 * Prettier: <https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode>
 * Black Formatter: <https://marketplace.visualstudio.com/items?itemName=ms-python.black-formatter>
+
+## Intended Market
+
+We are targeting general consumers who are interested in tracking their calories and meeting their fitness goals.
+
+## Functionality
+
+* Visitors to the site will first be introduced to the home screen with a brief introduction to our application along with testemonials on the lower half of the screen.
+  * They can click on the get started button underneath the banner to create an account in which the user will be asked to input brief information about themselves.
+  * Or they can click on the login button in the Navbar if they already have an account.
+  * If so inclined the user can checkout the various links in the Navbar such as the About us page. Which will introduce users to us and provide links to our respective    LinkedIn's and Gitlab profiles. Or they can click on the Contact us link which will direct the user to an email form which will allow them to get in contact with us directly.
+
+
+* Once the the user creates an account they will be shown the authenicated home page.
+* On this page they will be able to see a bar graph that shows your total calories for the past 7 days. Along with a line on the chart that indicated your total daily calorie goal (goals are set when the account is made). Allowing you to compare your total calories of that day and your calorie goal.
+* Under the graph there is a card that shows each category (breakfast, lunch, dinner, snack) along with what was eaten that day for each category and the total calories consumed that day. If nothing was logged there will a button in place of the chart that will navigate user to the log a meal page.
+* In the log a meal page the user will be greeted with two things. A button "ADD Meal Item" that when clicked will reveal a form that will allow you either look up a meal item on the USDA data base or the user can manual enter in the values for the meal. Once a meal is logged at the bottom of the page there will be a table that will show the user what they ate for the day.The user will also have the ability to filter through and see what they ate in the past as well as filter by category.
+
+
+
+## Project Initialization
+
+To fully enjoy this application on your local machine, please make sure to follow these steps:
+
+1. Clone the repository down to your local machine
+2. CD into the new project directory
+4. Run `docker compose build`
+5. Run `docker compose up`
+8. Enjoy CaloriesPlanner to its fullest!
+
 
 ## Deliverables
 
@@ -19,129 +68,3 @@ tasks for this week.
 * [ ] Project is deployed to Render.com/GitLab-pages
 * [ ] GitLab issue board is setup and in use
 * [ ] Journals
-
-## Project layout
-
-The layout of the project is just like all of the projects
-you did with `docker-compose` in module #2. You will create
-a directory in the root of the repository for each service
-that you add to your project just like those previous
-projects were setup.
-
-### Directories
-
-Several directories have been added to your project. The
-directories `docs` and `journals` are places for you and
-your team-mates to, respectively, put any documentation
-about your project that you create and to put your
-project-journal entries. See the _README.md_ file in each
-directory for more info.
-
-The other directories, `ghi` and `sample_service`, are
-sample services, that you can start building off of or use
-as a reference point.
-
-Inside of `ghi` is a minimal React app that has an "under
-construction" page. It is setup similarly to all of the
-other React projects that you have worked on.
-
-Inside of `sample_service` is a minimal FastAPI application.
-"Where are all the files?" you might ask? Well, the
-`main.py` file is the whole thing, and go take look inside
-of it... There's not even much in there..., hmm? That is
-FastAPI, we'll learn more about it in the coming days. Can
-you figure out what this little web-application does even
-though you haven't learned about FastAPI yet?
-
-Also in `sample_service` is a directory for your migrations.
-If you choose to use PostgreSQL, then you'll want to use
-migrations to control your database. Unlike Django, where
-migrations were automatically created for you, you'll write
-yours by hand using DDL. Don't worry about not knowing what
-DDL means; we have you covered. There's a sample migration
-in there that creates two tables so you can see what they
-look like.
-
-The sample Dockerfile and Dockerfile.dev run your migrations
-for you automatically.
-
-### Other files
-
-The following project files have been created as a minimal
-starting point. Please follow the guidance for each one for
-a most successful project.
-
-* `docker-compose.yaml`: there isn't much in here, just a
-  **really** simple UI and FastAPI service. Add services
-  (like a database) to this file as you did with previous
-  projects in module #2.
-* `.gitlab-ci.yml`: This is your "ci/cd" file where you will
-  configure automated unit tests, code quality checks, and
-  the building and deployment of your production system.
-  Currently, all it does is deploy an "under construction"
-  page to your production UI on GitLab and a sample backend
-  to Render.com. We will learn much more about this file.
-* `.gitignore`: This is a file that prevents unwanted files
-  from getting added to your repository, files like
-  `pyc` files, `__pycache__`, etc. We've set it up so that
-  it has a good default configuration for Python projects.
-
-## How to complete the initial deploy
-
-There will be further guidance on completing the initial
-deployment, but it just consists of these steps:
-
-### Setup GitLab repo/project
-
-* make sure this project is in a group. If it isn't, stop
-  now and move it to a GitLab group
-* remove the fork relationship: In GitLab go to:
-  
-  Settings -> General -> Advanced -> Remove fork relationship
-
-* add these GitLab CI/CD variables:
-  * PUBLIC_URL : this is your gitlab pages URL
-  * SAMPLE_SERVICE_API_HOST: enter "blank" for now
-
-#### Your GitLab pages URL
-
-You can't find this in GitLab until after you've done a deploy
-but you can figure it out yourself from your GitLab project URL.
-
-If this is your project URL
-
-https://gitlab.com/GROUP_NAME/PROJECT_NAME
-
-then your GitLab pages URL will be
-
-https://GROUP_NAME.gitlab.io/PROJECT_NAME
-
-### Create render.com account and application
-
-* create account on render.com
-* one person create a group and invite all other members
-* create a new "Web Service"
-  * authenticate with GitLab and choose your project
-  * Enter fields:
-    * Name: name of your service
-    * Root Directory: the directory of your service in your git repo.
-      For this example use "sample_service".
-    * Environment: Docker
-    * Plan Type: Free
-  * click the "Create Web Service" button to create it
-  * the build will succeed and it will look like the server is running,
-    most likely, in 6-10 minutes, it will fail.
-  * click "Manual Deploy" -> "Deploy latest commit" and the service
-    should deploy successfully.
-
-### Update GitLab CI/CD variables
-
-Copy the service URL for your new render.com service and then paste
-that into the value for the SAMPLE_SERVICE_API_HOST CI/CD variable
-in GitLab.
-
-### Deploy it
-
-Merge a change into main to kick off the initial deploy. Once the build pipeline
-finishes you should be able to see an "under construction" page on your GitLab
-pages site.

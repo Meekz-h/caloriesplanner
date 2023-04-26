@@ -225,7 +225,27 @@ Log in and Out:
 
 
 # Stretch Goals:
+### Delete a user by username
 
+- Endpoint path: /api/accounts/{username}
+- Endpoint method: DELETE
+
+- Headers:
+
+  - Authorization: Bearer token
+
+- Query parameters:
+
+  - account_id: account id
+
+- Response: Account information and a token
+
+- Response shape (JSON):
+  ```json
+  {
+    		true,
+  }
+  ```
 ## Users:
 
 ### Get a user
@@ -290,26 +310,4 @@ Log in and Out:
      age: int,
      goal: int | null,
     },
-  ```
-
-### Delete a user by username
-
-- Endpoint path: /api/accounts/{username}
-- Endpoint method: DELETE
-
-- Headers:
-
-  - Authorization: Bearer token
-
-- Query parameters:
-
-  - account_id: account id
-
-- Response: Account information and a token
-
-- Response shape (JSON):
-  ```json
-  {
-    		true,
-  }
   ```

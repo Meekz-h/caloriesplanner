@@ -1,10 +1,6 @@
-import { Input, Button } from "@material-tailwind/react";
 import { useGetUsdaMealsQuery } from "../../services/Entries";
 import { useSelector, useDispatch } from "react-redux";
-import {
-  handleNameChange,
-  handleCalorieChange,
-} from "../../features/entries/newEntriesSlice";
+import { handleCalorieChange } from "../../features/entries/newEntriesSlice";
 function UsdaMeals() {
   const { fields } = useSelector((state) => state.newEntry);
   const { data: foods } = useGetUsdaMealsQuery(fields.name);
@@ -30,7 +26,11 @@ function UsdaMeals() {
           ) : (
             foods.slice(0, 30).map((food) => {
               return (
-                <tr className="hover:bg-gray-100" key={foods.indexOf(food)} onClick={handleClick}>
+                <tr
+                  className="hover:bg-gray-100"
+                  key={foods.indexOf(food)}
+                  onClick={handleClick}
+                >
                   <td value={food.name}>{food.name}</td>
                   <td value={food.calories} name="calories">
                     {food.calories}
