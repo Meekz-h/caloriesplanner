@@ -31,10 +31,9 @@ function AuthMainPage() {
     <>
       <div className="container my-24 px-6 mx-auto">
         <div>
-          <h2>Date</h2>
+          <h2>Date: {date}</h2>
         </div>
         <Card>
-          Charts
           <MealChart />
         </Card>
       </div>

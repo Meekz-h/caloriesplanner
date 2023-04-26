@@ -1,8 +1,4 @@
-import {
-  Input,
-  Button,
-  Typography,
-} from "@material-tailwind/react";
+import { Input, Button, Typography } from "@material-tailwind/react";
 import { useSelector, useDispatch } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
 
@@ -22,11 +18,9 @@ function LogIn() {
   const { errorMessage, fields } = useSelector((state) => state.login);
   const Navigate = useNavigate();
 
-
   const handleSubmit = async (e) => {
     e.preventDefault();
     const resp = await login(fields);
-    console.log(resp)
     if (resp.error) {
       dispatch(error(resp.error.data.detail));
     } else {
