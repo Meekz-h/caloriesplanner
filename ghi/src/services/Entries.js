@@ -47,38 +47,38 @@ export const EntriesApi = createApi({
       providesTags: ["Account"],
     }),
 
-    login: builder.mutation({
-      query: (body) => {
-        const formData = new FormData();
-        formData.append("username", body.username);
-        formData.append("password", body.password);
-        return {
-          url: "/token",
-          method: "POST",
-          body: formData,
-          credentials: "include",
-        };
-      },
-      invalidatesTags: ["Account", "Entries"],
-    }),
-    signup: builder.mutation({
-      query: (body) => {
-        return {
-          url: "/api/accounts",
-          method: "POST",
-          body,
-        };
-      },
-      invalidatesTags: ["Account", "Entries"],
-    }),
-    logout: builder.mutation({
-      query: () => ({
-        url: "/token",
-        method: "DELETE",
-      }),
-      invalidatesTags: ["Account", "Entries"],
-    }),
-  }),
+		login: builder.mutation({
+			query: (body) => {
+				const formData = new FormData();
+				formData.append("username", body.username);
+				formData.append("password", body.password);
+				return {
+					url: "/token",
+					method: "POST",
+					body: formData,
+					credentials: "include",
+				};
+			},
+			invalidatesTags: ["Account", "Entries"],
+		}),
+		signup: builder.mutation({
+			query: (body) => {
+				return {
+					url: "/api/accounts",
+					method: "POST",
+					body,
+				};
+			},
+			invalidatesTags: ["Account", "Entries"],
+		}),
+		logout: builder.mutation({
+			query: () => ({
+				url: "/token",
+				method: "DELETE",
+			}),
+			invalidatesTags: ["Account", "Entries"],
+		}),
+	}),
 });
 
 export const {

@@ -94,3 +94,18 @@
     1. - Worked on the contact form feature, installed Emailjs and added to the contact form so that way users can send email to the foodie team
     2. - Fixed the layout/style of the log in form
     3. - Worked on the authorized main page, we added the meal history for the current day to the second card.
+
+### day 20 (April 25/2023)
+
+    1. - Worked on react google charts, we were able to display the information in the charts
+    2. - Worked on the unit test
+
+    3. - Worked on the authorized main page, we added the meal history for the current day to the second card.
+
+### day 21 (April 26/2023)
+
+    1. - Worked on cleaning up the code
+    2. - Worked on the layout/style of the log a meal page
+    3. - deleted console logging messages in the application
+    4. - Worked on the read me page
+    5. - Added the wireframe into the docs folder
