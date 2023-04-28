@@ -14,12 +14,12 @@ function AboutUs() {
 						alt=""
 					/>
 					<p>
-						At MacroPlanner, we believe that healthy eating should be simple and
-						accessible to everyone. That's why we've created Link food journal
-						that helps you track your macros and stay on top of your nutrition
+						At CaloriesPlanner, we believe that healthy eating should be simple and
+						accessible to everyone. That's why we've created this food journal
+						that helps you track your calories and stay on top of your nutrition
 						goals. Our platform is designed to make it easy for anyone to
 						achieve their health and fitness goals, regardless of their level of
-						expertise or experience. With MacroPlanner, you'll have the tools
+						expertise or experience. With CaloriesPlanner, you'll have the tools
 						you need to take control of your nutrition and feel your best.
 					</p>
 				</section>
