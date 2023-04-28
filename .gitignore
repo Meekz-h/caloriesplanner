@@ -182,4 +182,4 @@ cython_debug/
 **/*yarn-error.log*
 
 #mongodb
-mongo-data/
+
