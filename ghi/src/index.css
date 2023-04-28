@@ -3,27 +3,57 @@
 @tailwind utilities;
 
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+	margin: 0;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+		"Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+		sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
-.banner-card{
-  margin-top: -170px;
-  background: hsla(0, 0%, 100%, 0.7);
-
+.banner-card {
+	margin-top: -170px;
+	background: hsla(0, 0%, 100%, 0.7);
 }
+
 .banner {
-  background-image: url("./static/hero\ img.webp");
-  background-size: cover;
-  background-position: 50%;
-  height: 500px;
+	background: linear-gradient(to right, #0f913d, #0f6525);
+	background-size: auto 100%, cover;
+	height: 30rem;
+	position: relative;
+}
+
+.main-banner {
+	position: absolute;
+	clip-path: polygon(100% 0%, 100% 52%, 100% 100%, 4% 100%, 0% 50%, 11% 0);
+	width: 68%;
+	right: 0;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.berry-banner1 {
+	position: relative;
+	margin-top: 5rem;
+	margin-left: 5rem;
+}
+
+.berry-banner2 {
+	position: relative;
+	margin-left: 15rem;
+	margin-top: 2.1rem;
+}
+
+.slogan {
+	color: white;
+	font-size: 3.2rem;
+	line-height: 1.1;
+	margin: 3rem 0 0 1rem;
+	font-family: Rubik, Helvetica, Arial, sans-serif;
+	font-weight: bolder;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+	font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+		monospace;
 }

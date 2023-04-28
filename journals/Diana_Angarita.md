@@ -109,3 +109,11 @@
     3. - deleted console logging messages in the application
     4. - Worked on the read me page
     5. - Added the wireframe into the docs folder
+
+### day 22 (April 27/2023)
+    1. - worked on UI changes
+    2. - Went through the project and worked on code quality improvements
+
+### day 23 (April 28/2023)
+    1. - Change banner image and background
+    2. - Worked on the testimonial section
