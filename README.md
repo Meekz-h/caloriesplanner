@@ -60,11 +60,3 @@ To fully enjoy this application on your local machine, please make sure to follo
 5. Run `docker compose up`
 8. Enjoy CaloriesPlanner to its fullest!
 
-
-## Deliverables
-
-* [ ] Wire-frame diagrams
-* [ ] API documentation
-* [ ] Project is deployed to Render.com/GitLab-pages
-* [ ] GitLab issue board is setup and in use
-* [ ] Journals

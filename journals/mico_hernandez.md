@@ -73,3 +73,7 @@ A pretty relaxed day, we cleaned up the code and improved styling
 # 4/27/2023
 
 All the deliverables we're completed and this is probably my last journal entry. I've enjoyed every day working with this team and im proud of what we accomplished
+
+# 4/28/2023
+
+Submitting project today, just have to merge journals.
